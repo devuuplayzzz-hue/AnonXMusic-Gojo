@@ -5,20 +5,21 @@ load_dotenv()
 
 class Config:
     def __init__(self):
-        self.API_ID = int(getenv("API_ID", 0))
-        self.API_HASH = getenv("API_HASH")
+        self.API_ID = int(getenv("API_ID", "21846639"))
+        self.API_HASH = getenv("API_HASH", "2cebc99bd8378b5237b31ea8e7496d79")
 
-        self.BOT_TOKEN = getenv("BOT_TOKEN")
-        self.MONGO_URL = getenv("MONGO_URL")
+        self.BOT_TOKEN = getenv("BOT_TOKEN", "8913524572:AAEVVBg7Aq2G5A8uaI-wjYMIVGWjujTLn-A")
+        self.MONGO_URL = getenv("MONGO_DB_URI", "mongodb+srv://Devvusz:Devvuszxx05231@cluster0.3rfouod.mongodb.net/?appName=Cluster0")
 
-        self.LOGGER_ID = int(getenv("LOGGER_ID", 0))
-        self.OWNER_ID = int(getenv("OWNER_ID", 0))
+        self.LOGGER_ID = int(getenv("LOGGER_ID", "-1001973634248"))
+        self.LOG_CHAT_ID = int(getenv("LOG_CHAT_ID", "-1004356536394"))
+        self.OWNER_ID = int(getenv("OWNER_ID", "1499705163"))
 
         self.DURATION_LIMIT = int(getenv("DURATION_LIMIT", 60)) * 60
         self.QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", 20))
         self.PLAYLIST_LIMIT = int(getenv("PLAYLIST_LIMIT", 20))
 
-        self.SESSION1 = getenv("SESSION", None)
+        self.SESSION1 = getenv("STRING_SESSION", "BQFNWm8AXgFl0DopZqvwxcFQBvu9Fp_TAOFpWYz3scJfkocXcef0WLe1Yg4M51yhW_eKjHsGJG3caHwXaxkea9ERh2Y7aFcXdA3qWPerdRFk7ULs76EN4nsXT6dFGcYeb7UuCUDz3mSDdijc9_6XYJi1-QoBuMrLWDH6zzBUBzq0WZCj5EY1v4DWvYY5q1e3RQx6ZRsC0S5l3mN2EMXIIQ2rlG7qPqcjNL6PqyRX6_wBb4UjghI5GjvWqbrFXfOPRnB_YxvJ1aOzNrNed7uY96spBVPlNJuSe-QqS69yEz7buTs0VY9SMbyZIU4ph2cWXPmdwKYGoPtY4yB0zjOI6BWuXA1b5AAAAABsFeBfAA")
         self.SESSION2 = getenv("SESSION2", None)
         self.SESSION3 = getenv("SESSION3", None)
 

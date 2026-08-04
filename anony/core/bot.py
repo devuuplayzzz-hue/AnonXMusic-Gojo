@@ -38,18 +38,18 @@ class Bot(pyrogram.Client):
         self.mention = self.me.mention
 
         try:
-            await self.send_message(self.logger, "Bot Started")
+            await self.send_message(self.logger, "🤞 Domain Expansion: Bot Started")
             get = await self.get_chat_member(self.logger, self.id)
         except Exception as ex:
             raise SystemExit(f"Bot has failed to access the log group: {self.logger}\nReason: {ex}")
 
         if get.status != pyrogram.enums.ChatMemberStatus.ADMINISTRATOR:
             raise SystemExit("Please promote the bot as an admin in logger group.")
-        logger.info(f"Bot started as @{self.username}")
+        logger.info(f"🤞 The strongest is here: @{self.username}")
 
     async def exit(self):
         """
         Asynchronously stops the bot.
         """
         await super().stop()
-        logger.info("Bot stopped.")
+        logger.info("🤞 Domain Expansion: Closed. Bot stopped.")

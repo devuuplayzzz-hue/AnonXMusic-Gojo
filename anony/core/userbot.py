@@ -49,7 +49,7 @@ class Userbot(Client):
         client = clients[num]
         await client.start()
         try:
-            await client.send_message(config.LOGGER_ID, "Assistant Started")
+            await client.send_message(config.LOGGER_ID, "🔵 Cursed Technique: Blue... Assistant Started")
         except Exception:
             raise SystemExit(f"Assistant {num} failed to send message in log group.")
 
@@ -62,7 +62,7 @@ class Userbot(Client):
             await ub.join_chat("fallenx")
         except Exception:
             pass
-        logger.info(f"Assistant {num} started as @{client.username}")
+        logger.info(f"🔵 Assistant {num} active: @{client.username}")
 
     async def boot(self):
         """
@@ -85,4 +85,4 @@ class Userbot(Client):
             await self.two.stop()
         if config.SESSION3:
             await self.three.stop()
-        logger.info("Assistants stopped.")
+        logger.info("🔴 Cursed Technique: Red... Assistants stopped.")
